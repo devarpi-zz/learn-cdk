@@ -1,0 +1,43 @@
+# Developer Workspace
+WIP/
+.env
+.history/
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+node_modules
+!jest.config.js
+*.d.ts
+#IntelliJ IDE specific files
+/.idea/
+*.iml
+.env
+
+#sam
+sam/*template.json
+manifest.out
+ 
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+cdk.json
+cdk.context.json
+
+# Lambda Deployment directory
+deployment
+build
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+package-lock.json
+/cdk.json
+~*
+/report.*.json
+/test-files
+ 

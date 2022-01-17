@@ -1,0 +1,11 @@
+.history/
+.idea/
+build/
+cdk.out/
+coverage/
+node_modules/
+deployment/
+sam/
+bin/
+dist/
+e2e/

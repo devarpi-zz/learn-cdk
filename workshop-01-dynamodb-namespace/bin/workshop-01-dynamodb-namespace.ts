@@ -10,53 +10,10 @@ const app = new cdk.App();
 //Namespace the stack name
 new Workshop01DynamodbNamespaceSolutionStack(app, 'Workshop01DynamodbNamespaceStack');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const wrkshop01DynamodbNamespaceStack = new Workshop01DynamodbNamespaceStack(app, `${ENV_NAME}-${SERVICE_NAME}-dynamodb-namespace-stack`);
-
 
 // const ENV_NAME = app.node.tryGetContext("ENV_NAME");
 // const SERVICE_NAME = app.node.tryGetContext("SERVICE_NAME");
-
-
 
 // const tags = [
 //     { key: 'engineer', value: 'dsheth' },

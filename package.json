@@ -1,0 +1,113 @@
+{
+  "name": "learn-cdk",
+  "version": "1.0.0",
+  "description": "cdk workshop is for developers to learn deployment using popular lib aws cdk https://aws.amazon.com/cdk/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz",
+    "lint": "eslint -c .eslintrc.js '*/**/*.{js,ts}'",
+    "lint:fix": "eslint -c .eslintrc.js '*/**/*.{js,ts}' --quiet --fix",
+    "lint:quiet": "eslint 'workshop*/**/*.ts' --quiet",
+    "lint:report": "eslint 'workshop*/**/*.ts' -f json -o './build/eslint/eslint-report.json' -f html -o './build/eslint/eslint-report.html'",
+    "prettier": "prettier --check 'workshop*/**/*.ts'",
+    "prettier:fix": "prettier --write 'workshop*/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devarpi/learn-cdk.git"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.16.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-unicorn": "^20.1.0",
+    "husky": "^7.0.2",
+    "jest": "^27.1.1",
+    "lint-staged": "^10.2.9",
+    "prettier": "^2.4.1"
+  },
+  "author": "Devarpi Sheth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devarpi/learn-cdk/issues"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        "feat": {
+          "description": "A new feature",
+          "title": "Features"
+        },
+        "fix": {
+          "description": "A bug fix",
+          "title": "Bug Fixes"
+        },
+        "docs": {
+          "description": "Documentation only changes",
+          "title": "Docs"
+        },
+        "style": {
+          "description": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
+          "title": "Style Changes"
+        },
+        "refactor": {
+          "description": "A code change that neither fixes a bug nor adds a feature",
+          "title": "Refactors"
+        },
+        "test": {
+          "description": "Adding missing tests or correcting existing tests",
+          "title": "Tests"
+        },
+        "build": {
+          "description": "Changes that affect the build system or external dependencies (example scopes: npm, babel, webpack)",
+          "title": "Build System"
+        },
+        "ci": {
+          "description": "Changes to our CI configuration files and scripts (example scopes: CodePipeline)",
+          "title": "CI/CD"
+        },
+        "chore": {
+          "description": "Other changes that do not modify src or test files",
+          "title": "Other Changes"
+        },
+        "revert": {
+          "description": "Reverts a previous commit",
+          "title": "Reverts"
+        }
+      }
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint"
+    ],
+    "{src,lib,pipeline}/**/*.{js,ts,json,yml,yaml,md}": [
+      "prettier -c"
+    ],
+    "*.{js,json,yml,yaml,md}": [
+      "prettier -c"
+    ]
+  },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "npm run prettier:fix"
+    }
+  },
+  "homepage": "https://github.com/devarpi/learn-cdk#readme"
+}
