@@ -28,13 +28,13 @@ This workshop is going to cover following two items.
 ```
 
 * Deployment using cdk
-    cdk deploy --require-approval=never --profile cb-powerfaidscloud-nonprod-dev-cli <STACK_NAME>  <example - dev-mssecurityheader-stack>
+    cdk deploy --require-approval=never --profile <AWS_PROFILE> <STACK_NAME>  <example - dev-mssecurityheader-stack>
 * Diff using ckd
-    cdk diff --profile cb-powerfaidscloud-nonprod-dev-cli <STACK_NAME>  <example -dev-mssecurityheader-stack>
+    cdk diff --profile <AWS_PROFILE>  <STACK_NAME>  <example -dev-mssecurityheader-stack>
 * list stack using cdk
-    cdk ls --profile cb-powerfaidscloud-nonprod-dev-cli <STACK_NAME>  <example -dev-mssecurityheader-stack>
+    cdk ls --profile <AWS_PROFILE>  <STACK_NAME>  <example -dev-mssecurityheader-stack>
 * Destroy stack using cdk
-    cdk destroy --profile cb-powerfaidscloud-nonprod-dev-cli <STACK_NAME>  <example -dev-mssecurityheader-stack>
+    cdk destroy --profile <AWS_PROFILE>  <STACK_NAME>  <example -dev-mssecurityheader-stack>
 * Not CDK, SAM conversion using cdk
     cdk synth --no-staging > ./sam/template.yaml
   
