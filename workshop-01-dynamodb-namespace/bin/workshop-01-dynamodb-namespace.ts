@@ -3,7 +3,7 @@ import 'source-map-support/register';
 import { Tags } from 'aws-cdk-lib';
 import * as cdk from 'aws-cdk-lib';
 
-import { Workshop01DynamodbNamespaceSolutionStack } from '../solution/workshop-01-dynamodb-namespace-solution-stack'; 
+import { Workshop01DynamodbNamespaceSolutionStack } from '../solution/workshop-01-dynamodb-namespace-solution-stack';
 const app = new cdk.App();
 
 //Get env in to stack
@@ -50,8 +50,7 @@ const tags = [
 ];
 
 //Add All Tags
-for (const tag of tags) { 
+for (const tag of tags) {
   Tags.of(wrkshop01DynamodbNamespaceStack).add(tag.key, tag.value);
-
 }
 //Tag the entier stack
