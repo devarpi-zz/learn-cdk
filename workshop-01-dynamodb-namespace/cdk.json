@@ -1,0 +1,7 @@
+{
+  "app": "npx ts-node bin/workshop-01-dynamodb-namespace.ts",
+  "context": {
+    "ENV_NAME": "<YOUR_NAME>",
+    "SERVICE_NAME": "workshop-01"
+  }
+}
