@@ -1,12 +1,14 @@
-import * as cdk from '@aws-cdk/core';
-import * as dynamodb from '@aws-cdk/aws-dynamodb';
+import * as cdk from 'aws-cdk-lib';
+import { Stack, StackProps, RemovalPolicy } from 'aws-cdk-lib'; 
+import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
+import { TableEncryption } from 'aws-cdk-lib/aws-dynamodb';
+import { Construct } from 'constructs';
+import * as _ from 'lodash'; 
 
-import * as _ from 'lodash';
-import { RemovalPolicy } from '@aws-cdk/core';
 
 //Docs https://docs.aws.amazon.com/cdk/api/latest/docs/aws-dynamodb-readme.html
-export class Workshop01DynamodbNamespaceStack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+export class Workshop01DynamodbNamespaceStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
   }
 }
