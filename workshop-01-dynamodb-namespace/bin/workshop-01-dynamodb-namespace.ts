@@ -19,13 +19,12 @@ const wrkshop01DynamodbNamespaceStack = new Workshop01DynamodbNamespaceSolutionS
 // const SERVICE_NAME = app.node.tryGetContext("SERVICE_NAME");
 
 const tags = [
-  { key: 'engineer', value: 'dsheth' },
-  { key: 'cb_program', value: 'financial_aid_software' },
+  { key: 'engineer', value: 'dsheth' }, 
   { key: 'accessibility', value: 'privae' },
   { key: 'data_classification', value: 'proprietary' },
   {
     key: 'team_lead',
-    value: 'bdakshinamurthy',
+    value: 'dsheth',
   },
   {
     key: 'env',
@@ -33,7 +32,7 @@ const tags = [
   },
   {
     key: 'asset_id',
-    value: 'PFCL-MS-DR-SERVICE',
+    value: 'my-frist-cdk-app',
   },
   {
     key: 'lifecycle',
@@ -45,7 +44,7 @@ const tags = [
   },
   {
     key: 'system_id',
-    value: 'PFCL',
+    value: 'learn-cdk',
   },
 ];
 
