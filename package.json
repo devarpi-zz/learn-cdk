@@ -36,7 +36,7 @@
     "prettier": "^2.4.1"
   },
   "author": "Devarpi Sheth",
-  "license": "ISC",
+  "license": "Apache-2.0 License",
   "bugs": {
     "url": "https://github.com/devarpi/learn-cdk/issues"
   },
